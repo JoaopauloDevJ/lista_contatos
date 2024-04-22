@@ -42,16 +42,19 @@ const Contato = ({
         <S.ContatoCard>
               <S.Nome
                 value={nome}
+                disabled={!estaEditando}
                 onChange={(evento) => setNome(evento.target.value)}>
                 {nome}
               </S.Nome>
               <S.Email
                 value={email}
+                disabled={!estaEditando}
                 onChange={(evento) => setEmail(evento.target.value)}>
                 {email}
               </S.Email>
               <S.Numero
                 value={numero}
+                disabled={!estaEditando}
                 onChange={(evento) => setNumero(evento.target.value)}>{numero}</S.Numero>
           <S.ContainerBotao>
           {estaEditando ? (
